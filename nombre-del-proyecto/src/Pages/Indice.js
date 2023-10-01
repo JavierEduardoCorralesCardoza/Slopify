@@ -1,7 +1,7 @@
 import React from 'react';
-import SearchBar from '../SearchBar.js';
-import ButtonBar from './ButtonBar.js';
-import LlamadoClientes from './LlamadoClientes.js';
+import SearchBar from '../Components/SearchBar.js';
+import ButtonBar from '../Components/ButtonBar.js';
+import LlamadoClientes from '../Components/LlamadoClientes.js';
 
 function Indice(){
     return(
