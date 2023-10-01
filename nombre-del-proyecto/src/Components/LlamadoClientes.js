@@ -19,7 +19,7 @@ function LlamadoClientes() {
   return (
     <div>
         <ul>
-            {data.clientes.map((cliente, index) => (
+        {data?.clientes?.map((cliente, index) => (
             <li key={index}>
                 <p>Nombre: {cliente.nombre}</p>
                 <p>Datos:</p>
@@ -28,7 +28,7 @@ function LlamadoClientes() {
                     <li>b: {cliente.datos.b}</li>
                 </ul>
             </li>
-            ))}
+        ))}
         </ul>
     </div>
   );

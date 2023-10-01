@@ -31,7 +31,28 @@ app.get('/api/data', (req, res) => {
         ]
     };
 
-  res.json(clientes)
+    res.json(clientes)
 });
+
+app.get("/api/playlist", (req, res) => {
+    playlists = {
+        "playlists":[
+            {
+                "id": 1,
+                "nombre": "Playlist 1"
+            },
+            {
+                "id": 2,
+                "nombre": "Playlist 2"
+            },
+            {
+                "id": 3,
+                "nombre": "Playlist 3"
+            }
+        ]
+    };
+
+    res.json(playlists);
+})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
