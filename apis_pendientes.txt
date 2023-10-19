@@ -1,0 +1,63 @@
+Sign up POST que envie correo, nimbre, contraseña e imagen, para la creacion de una cuenta(correo nombre contraseña imagen)
+
+Log in GET que reciba los datos de la cuenta y compare contraseñas para iniciar sesion (correo, contraseña)
+
+Pagina de inicio GET que reciba artistas para recomendar en el home (correo_cuenta, correo nombre e imagen de artistas)
+
+ARTISTA
+
+Pagina de artista GET (correo_artista, nombre imagen)
+
+Pagina artista albumes GET (correo_artista, album_id album_nombre album_imagen)
+
+Pagina artista parecidos GET (correo_artista, correo_artista nombre foto)
+
+Pagina artista seguir POST (correo_cuenta correo_artista, ok)
+
+Paginas artista desseguir DELETE (correo_cuenta correo_artista, ok)
+
+ALBUM
+
+Pagina album GET (id_album, id_canciones nombre_cancion ruta_audio imagen_cancion)
+
+Agragar favoritos POST (correo_cuenta id_album, ok)
+
+CANCION
+
+Reproduccion cancion GET (ruta_cancion, mp4_cancion)
+
+Agragar favoritos POST (correo_cuenta id_cancion, ok)
+
+Agregar a playlist POST(correo_cuenta id_cancion, ok)
+
+BIBLIOTECA
+
+Mostrar playlist GET (correo_cuenta, id_playlits nombre_playlits imagen_playlits)
+
+Crear playlist POST (correo_cuenta, ok)
+
+Eliminar playlist DELETE (correo_cuenta id_playlist, ok)
+
+Seguir playlist POST (correo_cuenta, ok)
+
+Desseguir playlits DELETE (correo_cuenta id_playlist, ok)
+
+Mostrar artistas seguidos GET (correo_cuenta, correo_artista nombre_artista imagen_artista) {Estandarizar con el de inicio}
+
+Mostrar albumes seguidos GET (correo_cuenta, id_album nombre_album imagen_album)
+
+Renombrar playlist PUT (id_playlist nombre_nuevo, ok)
+
+PLAYLIST
+
+Mostrar canciones GET (id_playlist, cancion_id nombre_cancion imagen_cancion ruta_cancion)
+
+Añadir cancion POST (id_playlits id_cancion, ok)
+
+Eliminar cancion DELETE (id_playlist id_cancion, ok)
+
+USUARIO
+
+Cambiar nombre PUT (correo_cuenta nombre_nuevo, ok)
+
+Cambiar contraseña PUT (correo_cuenta contraseña_nueva, ok)

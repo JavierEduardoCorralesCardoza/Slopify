@@ -55,4 +55,8 @@ app.get("/api/playlist", (req, res) => {
     res.json(playlists);
 })
 
+app.post("/api/cuenta", (req, res) => {
+    
+})
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
