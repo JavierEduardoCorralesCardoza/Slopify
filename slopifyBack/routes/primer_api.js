@@ -1,3 +1,4 @@
+/*
 const express = require("express");
 const con = require("../config/database.js")
 
@@ -12,4 +13,4 @@ con.connect(function(err){
         console.log("Resultado: " + result);
     })
 })
-
+*/
