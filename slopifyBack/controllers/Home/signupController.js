@@ -1,14 +1,14 @@
 const agregarUsuario = require('../../models/Home/signupModel');
 
-function signupController(req, res) {
+async function signupController(req, res) {
     try{
         data = {
-            correo: "prueba@gmail.com",
-            nombre: "fulanito de tal",
+            correo: "mysql2@gmail.com",
+            nombre: "siu",
             contrasena: "1234"
         };
 
-        respuesta = agregarUsuario(data);
+        respuesta = await agregarUsuario(data);
 
         res.json({
             status: 'success',
