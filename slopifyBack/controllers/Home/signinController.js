@@ -1,17 +1,17 @@
 const conectarUsuario = require('../../models/Home/signinModel');
 
-function signinController(req, res) {
+async function signinController(req, res) {
     try{
         data = {
             correo: "prueba@gmail.com",
             contrasena: "1234"
         };
 
-        respuesta = conectarUsuario(data);
+        respuesta = await conectarUsuario(data);
 
         res.json({
             status: 'success',
-            result: respuesta
+            result: respuesta[0]
         })
     }
     catch(err){
