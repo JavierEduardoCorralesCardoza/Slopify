@@ -7,12 +7,18 @@ function signinController(req, res) {
             contrasena: "1234"
         };
 
-        respuesta = conectarUsuario(data);
-
-        res.json({
-            status: 'success',
-            result: respuesta
+        conectarUsuario(data).then(password => {
+            console.log('Contraseña:', password);
+            res.json({
+                status: 'success',
+                result: password
+            })
         })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+        
     }
     catch(err){
         res.json({
