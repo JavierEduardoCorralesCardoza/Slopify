@@ -1,5 +1,4 @@
-const pool = require('../config/database');
-
+const pool = require('../../config/database');
 async function agregarUsuario(data){
     try{
         const result = await pool.query("INSERT INTO Cuenta (cuenta_Correo, cuenta_Nombre, cuenta_Contraseña) VALUES (?, ?, ?)", [data.correo, data.nombre, data.contrasena]);

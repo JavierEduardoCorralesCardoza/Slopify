@@ -1,15 +1,13 @@
-const agregarUsuario = require('../models/model');
-const modelo = require('../models/model');
+const conectarUsuario = require('../../models/Home/signinModel');
 
-function signupController(req, res) {
+function signinController(req, res) {
     try{
         data = {
             correo: "prueba@gmail.com",
-            nombre: "fulanito de tal",
             contrasena: "1234"
         };
 
-        respuesta = agregarUsuario(data);
+        respuesta = conectarUsuario(data);
 
         res.json({
             status: 'success',
@@ -24,4 +22,4 @@ function signupController(req, res) {
     }
 }
 
-module.exports = signupController;
+module.exports = signinController;
