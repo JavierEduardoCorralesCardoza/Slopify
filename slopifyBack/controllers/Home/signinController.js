@@ -11,7 +11,7 @@ async function signinController(req, res) {
 
         res.json({
             status: 'success',
-            result: respuesta
+            result: respuesta[0]
         })
     }
     catch(err){
